@@ -17,3 +17,14 @@ It is:
 - a set of tools and libraries useful for robotics (OpenCV, tf, MoveIt...)
 - a set of visualisation and simulation tools
 - a community 
+
+
+## ROS Basics
+
+Nodes
+
+Topics
+
+Show graph and show a simple code, init node, sub pub
+spin
+
