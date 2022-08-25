@@ -20,13 +20,16 @@ The project will also provide an opportunity for students to enhance their profe
 - Know how to use important tools in ROS, be able to contribute to ROS, have awareness of available packages in ROS  
 - Be comfortable operating a robot platform, have experience using ROS tools to control a robot platform  
 - Understand the importance of interface design and robustness of functionalities in robotics  
-- Be prepared to interview for a software developper job in teh robotics industry  
+- Be prepared to interview for a software developper job in the robotics industry  
 
 ## PROJECT: THE NEXT ROBOTICS START-UP  
 
+### The Pitch 
+
 This is a great time to start a software robotics company: the basic technology has matured, early companies are gaining traction, the public is receptive, and the investors want a piece of it. The last few years have witnessed an amazing growth in robotics investments. A new robotics startup company pops up almost every week.  
 
-A good portion of these companies are *robotics applications* companies (as opposed to *robotics technology* companies). They take existing robotic capabilities (perhaps improve or customize them a little bit) and integrate them in a way that solves a real need or exploits a proven market. Many of these companies are involve applications of mobile robots (e.g. [Savioke](http://www.google.com/url?q=http%3A%2F%2Fwww.savioke.com%2F&sa=D&sntz=1&usg=AOvVaw3bwRnKy54PTVThkEOqBCDd), [Cobalt](https://www.google.com/url?q=https%3A%2F%2Fwww.cobaltrobotics.com%2F&sa=D&sntz=1&usg=AOvVaw2vMgEJp9Gh2PNGr_3sOQcP), [Simbe](http://www.google.com/url?q=http%3A%2F%2Fwww.simberobotics.com%2F&sa=D&sntz=1&usg=AOvVaw0E8df-WO1bb1FUzvNpMJir)) or social robots (e.g. [Jibo](https://www.google.com/url?q=https%3A%2F%2Fwww.jibo.com%2F&sa=D&sntz=1&usg=AOvVaw3lOkp4hAq_0XbnAO7g6eLp), [Aido](http://www.google.com/url?q=http%3A%2F%2Fwww.aidorobot.com%2F&sa=D&sntz=1&usg=AOvVaw3Bg7fHBkskk_eGxQeelMGQ), [Kuri](https://www.google.com/url?q=https%3A%2F%2Fwww.heykuri.com&sa=D&sntz=1&usg=AOvVaw1rK2my2H-2aIgdh8BZnxxI)).  
+A good portion of these companies are *robotics applications* companies (as opposed to *robotics technology* companies). They take existing robotic capabilities (perhaps improve or customize them a little bit) and integrate them in a way that solves a real need or exploits a proven market. Many of these companies are involve applications of mobile robots <!-- (e.g. [Savioke](http://www.google.com/url?q=http%3A%2F%2Fwww.savioke.com%2F&sa=D&sntz=1&usg=AOvVaw3bwRnKy54PTVThkEOqBCDd), [Cobalt](https://www.google.com/url?q=https%3A%2F%2Fwww.cobaltrobotics.com%2F&sa=D&sntz=1&usg=AOvVaw2vMgEJp9Gh2PNGr_3sOQcP), [Simbe](http://www.google.com/url?q=http%3A%2F%2Fwww.simberobotics.com%2F&sa=D&sntz=1&usg=AOvVaw0E8df-WO1bb1FUzvNpMJir)) or social robots (e.g. [Jibo](https://www.google.com/url?q=https%3A%2F%2Fwww.jibo.com%2F&sa=D&sntz=1&usg=AOvVaw3lOkp4hAq_0XbnAO7g6eLp), [Aido](http://www.google.com/url?q=http%3A%2F%2Fwww.aidorobot.com%2F&sa=D&sntz=1&usg=AOvVaw3Bg7fHBkskk_eGxQeelMGQ), [Kuri](https://www.google.com/url?q=https%3A%2F%2Fwww.heykuri.com&sa=D&sntz=1&usg=AOvVaw1rK2my2H-2aIgdh8BZnxxI))-->.
+They companies often look for people with good programming skills and knowlegde in applied AI, and applied machine learning.
 
 You will do the same in your projects, but for **mobile manipulator robots.** You will find a viable application of mobile manipulators and you will develop an early prototype of something that could eventually become a product. While there has been great progress on making mobile manipulators capable, they are still far from having *general-purpose* functionalities, such as the ability to detect and grasp any type of object. Instead, your projects should scope down the robot's task to a smaller set of objects to be manipulated and take advantage of the task structure to develop *special-purpose* manipulation capabilities. We highly encourage *structuring the robot's task environment* to enable functionalities that might not be possible in environments that are structured for humans.  
 
@@ -72,9 +75,10 @@ Please keep in mind:
 - One member from each team should submit a link to the post on [Canvas](https://www.google.com/url?q=https%3A%2F%2Fcanvas.uw.edu%2F&sa=D&sntz=1&usg=AOvVaw0Eb0tU-buxkylFjlJDp0zG) by this deadline.  
 - You will have a total of 5 "grace days" for late submissions. Late posts will be reviewed the following week. If you are out of grace days, you will receive 1/2^n of the total grade, where n is the number of weeks that the post is late for.  
 
-**Lecture versus lab:** We will have mini-lectures (~30min) during some classes and use the rest of the lecture time for labs and feedback from the instructors.  
+**Lecture versus lab:** We will have 45min lectures during some classes and use the rest of the lecture time for labs and feedback from the instructors.  
 
-**Office hours:** There will be an office hour with one of the TAs once a week on Thursday afternoons. Notify the instructors if no one from your team is able to make it to the office hour. If you are having team issues or feel lost in terms of your project direction, you can schedule a team meeting with the instructor from [this calendar](https://www.google.com/calendar/selfsched?sstoken=UUtrX3dObVNyNFVQfGRlZmF1bHR8YzdlZTk0NWQyOGRkZWFjYTczM2RlYjkyYTJmNjMxYmQ).  
+<!--
+**Office hours:** There will be an office hour with one of the TAs once a week on Thursday afternoons. Notify the instructors if no one from your team is able to make it to the office hour. If you are having team issues or feel lost in terms of your project direction, you can schedule a team meeting with the instructor from this calendar
 
 **Robotics news of the day:** At the beginning of Tuesday lectures at least one person will give a two-minute presentation of a robotics-related news or fun-fact. You can volunteer for this by sending the instructors a link to a news and a 1 or 2 sentence blurb about the link, which will be posted on the [course Tumblr page](http://www.google.com/url?q=http%3A%2F%2Fcse481sp17news.tumblr.com%2F&sa=D&sntz=1&usg=AOvVaw0f1nqAiYr_mX39q8-dtqSe).  
 
@@ -82,6 +86,7 @@ Please keep in mind:
 **E-mails:** When you email the instructor and/or the TA, please remember to include the word "CSE481" in your subject line.  
 **Discussions:** Please use Canvas discussion boards for questions that might be relevant for the rest of the class.  
 **Sharing the driver's seat:** All labs and assignments will be done in teams. Please make sure that the lead programmer role rotates among team members, no matter how slow you type or how little experience you have.
+-->
 
 ## GRADING
 
