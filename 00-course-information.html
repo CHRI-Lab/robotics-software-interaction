@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Course Information &#8212; Robotics: Software and Interaction</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="01-introduction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/hri-ros.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Robotics: Software and Interaction</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Course Information
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-introduction.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-visualisation-transformation.html">
+   Visualisation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-motion-manipulation.html">
+   Motion and Manipulation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-perception.html">
+   Perception: AR Tatgs, Segmentation, Clustering
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-human-robot-interaction.html">
+   Human-Robot Interaction
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F00-course-information.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/00-course-information.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-objectives">
+   COURSE OBJECTIVES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-the-next-robotics-start-up">
+   PROJECT: THE NEXT ROBOTICS START-UP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistics-rules">
+   LOGISTICS &amp; RULES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grading">
+   GRADING
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Course Information</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-objectives">
+   COURSE OBJECTIVES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-the-next-robotics-start-up">
+   PROJECT: THE NEXT ROBOTICS START-UP
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logistics-rules">
+   LOGISTICS &amp; RULES
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grading">
+   GRADING
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="course-information">
+<h1>Course Information<a class="headerlink" href="#course-information" title="Permalink to this headline">#</a></h1>
+<section id="course-objectives">
+<h2>COURSE OBJECTIVES<a class="headerlink" href="#course-objectives" title="Permalink to this headline">#</a></h2>
+<p>The main goal of this course is to open up new career options in robotics for computer science and engineering students. To that end, the course will teach you the basics of robotics and give you implementation experience. You will learn to use libraries and tools within the most popular robot programming framework [ROS](Robot Operating System). We will touch on robot motion, navigation, perception, planning, and interaction through mini-lectures, labs and assignments, eventually integrating these components to create autonomous or semi-autonomous robotic functionalities. The project will give you team-work experience with large scale software integration and it will get you thinking about opportunities for using robots to make people’s lives easier. At the end of the quarter students are expected to:</p>
+<ul class="simple">
+<li><p>Understand basics of robot navigation, perception, planning, interaction; have a sense of challenging problems in robotics</p></li>
+<li><p>Know how to use important tools in ROS, be able to contribute to ROS, have awareness of available packages in ROS</p></li>
+<li><p>Be comfortable operating a robot platform, have experience using ROS tools to control a robot platform</p></li>
+<li><p>Understand the importance of interface design and robustness of functionalities in robotics</p></li>
+<li><p>Intergate human-centered design in a robotics solution</p></li>
+<li><p>Be prepared to interview for a robotics job</p></li>
+</ul>
+</section>
+<section id="project-the-next-robotics-start-up">
+<h2>PROJECT: THE NEXT ROBOTICS START-UP<a class="headerlink" href="#project-the-next-robotics-start-up" title="Permalink to this headline">#</a></h2>
+<p>This is a great time to start a software robotics company: the basic technology has matured, early companies are gaining traction, the public is receptive, and the investors want a piece of it. The last few years have witnessed an amazing growth in robotics investments. A new robotics startup company pops up almost every week.</p>
+<p>A good portion of these companies are <em>robotics applications</em> companies (as opposed to <em>robotics technology</em> companies). They take existing robotic capabilities (perhaps improve or customize them a little bit) and integrate them in a way that solves a real need or exploits a proven market. Many of these companies are involve applications of mobile robots (e.g. <a class="reference external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.savioke.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3bwRnKy54PTVThkEOqBCDd">Savioke</a>, <a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fwww.cobaltrobotics.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw2vMgEJp9Gh2PNGr_3sOQcP">Cobalt</a>, <a class="reference external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.simberobotics.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw0E8df-WO1bb1FUzvNpMJir">Simbe</a>) or social robots (e.g. <a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fwww.jibo.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3lOkp4hAq_0XbnAO7g6eLp">Jibo</a>, <a class="reference external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.aidorobot.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3Bg7fHBkskk_eGxQeelMGQ">Aido</a>, <a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fwww.heykuri.com&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw1rK2my2H-2aIgdh8BZnxxI">Kuri</a>).</p>
+<p>You will do the same in your projects, but for <strong>mobile manipulator robots.</strong> You will find a viable application of mobile manipulators and you will develop an early prototype of something that could eventually become a product. While there has been great progress on making mobile manipulators capable, they are still far from having <em>general-purpose</em> functionalities, such as the ability to detect and grasp any type of object. Instead, your projects should scope down the robot’s task to a smaller set of objects to be manipulated and take advantage of the task structure to develop <em>special-purpose</em> manipulation capabilities. We highly encourage <em>structuring the robot’s task environment</em> to enable functionalities that might not be possible in environments that are structured for humans.</p>
+<p>What tools and resources are available to you?</p>
+<ul class="simple">
+<li><p>We will have an Ubuntu desktop for each team</p></li>
+<li><p>We will have one Fetch mobile manipulator robot for teams to share</p></li>
+<li><p>You can request an Android tablet and/or a mobile smartphone that can be attached to the robot or used for controlling the robot</p></li>
+<li><p>You can request Arduino or Raspberry Pi kits</p></li>
+<li><p>You can request servo motors, LEDs, or other actuators</p></li>
+<li><p>You will have access to the CoMotion Makerspace for 3D printing, laser cutting, and other tools; you can request fabrication materials</p></li>
+<li><p>You can request additional sensors or peripherals for the robot</p></li>
+<li><p>You can request special controllers or wearables</p></li>
+<li><p>You can request home automation tools</p></li>
+<li><p>You can request furniture related to the robot’s functionality</p></li>
+</ul>
+<p>We will mainly support software development within <a class="reference external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.ros.org%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw1ZwFFpaXeI8T-3VZPIxxko">ROS</a> but you will get the opportunity to learn or practice web, Android, or embedded programming if you wish to do so.</p>
+<p>You will do projects in teams. The number of teams and persons per team will be determined based on total number of registered students. Team structure is flexible, but we recommend an even distribution of the following roles among team members:</p>
+<ul class="simple">
+<li><p><strong>ROS guru:</strong> Understands the nitty gritty details of ROS (e.g. what’s the difference between a topic and a message?) and knows how to use different ROS tools.</p></li>
+<li><p><strong>Perception guru:</strong> Understands sensor data and can write software for processing it.</p></li>
+<li><p><strong>Hardware guru:</strong> Understand the hardware, is not afraid of using a screw-driver or a 3D printer.</p></li>
+<li><p><strong>Design and fabrication guru:</strong> Makes sketches of ideas, knows 2D and 3D computer-aided design tools, knows how to operate the laser cutter and 3D printer.</p></li>
+<li><p><strong>User interface guru:</strong> Understands human factors and usability, makes things look good.</p></li>
+<li><p><strong>Manager:</strong> Makes sure every team member is on the same page at all times. Help make decisions (layout pros and cons). Enforce “interface agreements” so components can be easily integrated.</p></li>
+<li><p><strong>Documentation and communications:</strong> Makes videos, takes notes, writes blog posts, gives presentations and acts as spokesperson.</p></li>
+</ul>
+</section>
+<section id="logistics-rules">
+<h2>LOGISTICS &amp; RULES<a class="headerlink" href="#logistics-rules" title="Permalink to this headline">#</a></h2>
+<p>Please keep in mind:<br />
+<strong>Collaboration:</strong></p>
+<ul class="simple">
+<li><p>Our main collaboration platform will be <a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw3K6x2c5JSD7q3c6-7F5JdK">GitHub</a>. If you do not yet have an account please create one.</p></li>
+<li><p>One member from your team should create a repository for the class project and add the others as collaborators.</p></li>
+<li><p>Use the wiki for internal documentation.</p></li>
+</ul>
+<p><strong>Assignments:</strong></p>
+<ul class="simple">
+<li><p>You will give a weekly update every week in the form of a blog post on your Tumblr page.</p></li>
+<li><p>Each week we will give you a list of things we would like to see in the blog post and tell you how the blog post will be reviewed and graded, here.</p></li>
+<li><p>Your blog posts are due on the following <strong>Monday at 5pm</strong>. The teaching staff will review and grade blogs immediately after this deadline.</p></li>
+<li><p>One member from each team should submit a link to the post on <a class="reference external" href="https://www.google.com/url?q=https%3A%2F%2Fcanvas.uw.edu%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw0Eb0tU-buxkylFjlJDp0zG">Canvas</a> by this deadline.</p></li>
+<li><p>You will have a total of 5 “grace days” for late submissions. Late posts will be reviewed the following week. If you are out of grace days, you will receive 1/2^n of the total grade, where n is the number of weeks that the post is late for.</p></li>
+</ul>
+<p><strong>Lecture versus lab:</strong> We will have mini-lectures (~30min) during some classes and use the rest of the lecture time for labs and feedback from the instructors.</p>
+<p><strong>Office hours:</strong> There will be an office hour with one of the TAs once a week on Thursday afternoons. Notify the instructors if no one from your team is able to make it to the office hour. If you are having team issues or feel lost in terms of your project direction, you can schedule a team meeting with the instructor from <a class="reference external" href="https://www.google.com/calendar/selfsched?sstoken=UUtrX3dObVNyNFVQfGRlZmF1bHR8YzdlZTk0NWQyOGRkZWFjYTczM2RlYjkyYTJmNjMxYmQ">this calendar</a>.</p>
+<p><strong>Robotics news of the day:</strong> At the beginning of Tuesday lectures at least one person will give a two-minute presentation of a robotics-related news or fun-fact. You can volunteer for this by sending the instructors a link to a news and a 1 or 2 sentence blurb about the link, which will be posted on the <a class="reference external" href="http://www.google.com/url?q=http%3A%2F%2Fcse481sp17news.tumblr.com%2F&amp;sa=D&amp;sntz=1&amp;usg=AOvVaw0f1nqAiYr_mX39q8-dtqSe">course Tumblr page</a>.</p>
+<p><strong>Sharing the robot:</strong> Six teams will need to share one robot! To make this as smooth as possible please reserve time on the <a class="reference external" href="https://calendar.google.com/calendar/embed?mode=week&amp;src=cs.washington.edu_u990n37gkbs31e810jctf0ial8%40group.calendar.google.com&amp;ctz=America/Los_Angeles">robot google calendar</a> in blocks of at most 1h30m. We recommend that you use the robot simulator to test and debug your work before trying things on the physical robot.<br />
+<strong>E-mails:</strong> When you email the instructor and/or the TA, please remember to include the word “CSE481” in your subject line.<br />
+<strong>Discussions:</strong> Please use Canvas discussion boards for questions that might be relevant for the rest of the class.<br />
+<strong>Sharing the driver’s seat:</strong> All labs and assignments will be done in teams. Please make sure that the lead programmer role rotates among team members, no matter how slow you type or how little experience you have.</p>
+</section>
+<section id="grading">
+<h2>GRADING<a class="headerlink" href="#grading" title="Permalink to this headline">#</a></h2>
+<p>The distribution of your grades will be as follows:</p>
+<ul class="simple">
+<li><p>60% Weekly blog posts</p></li>
+<li><p>20% Final project demo and video</p></li>
+<li><p>20% Participation and teamwork</p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="01-introduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Wafa Johal<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
