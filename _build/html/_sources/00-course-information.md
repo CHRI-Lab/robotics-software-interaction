@@ -33,20 +33,24 @@ They companies often look for people with good programming skills and knowlegde 
 
 You will do the same in your projects, but for **mobile manipulator robots.** You will find a viable application of mobile manipulators and you will develop an early prototype of something that could eventually become a product. While there has been great progress on making mobile manipulators capable, they are still far from having *general-purpose* functionalities, such as the ability to detect and grasp any type of object. Instead, your projects should scope down the robot's task to a smaller set of objects to be manipulated and take advantage of the task structure to develop *special-purpose* manipulation capabilities. We highly encourage *structuring the robot's task environment* to enable functionalities that might not be possible in environments that are structured for humans.  
 
+### The ressources
+
 What tools and resources are available to you?  
 
 - We will have an Ubuntu desktop for each team  
-- We will have one Fetch mobile manipulator robot for teams to share  
+- We will have one mobile manipulator robot for teams to share  
 - You can request an Android tablet and/or a mobile smartphone that can be attached to the robot or used for controlling the robot  
 - You can request Arduino or Raspberry Pi kits  
 - You can request servo motors, LEDs, or other actuators  
-- You will have access to the CoMotion Makerspace for 3D printing, laser cutting, and other tools; you can request fabrication materials  
+- You will have access to the Telstra Makerspace for 3D printing, laser cutting, and other tools; you can request fabrication materials  
 - You can request additional sensors or peripherals for the robot  
 - You can request special controllers or wearables  
 - You can request home automation tools  
 - You can request furniture related to the robot's functionality  
 
-We will mainly support software development within [ROS](http://www.google.com/url?q=http%3A%2F%2Fwww.ros.org%2F&sa=D&sntz=1&usg=AOvVaw1ZwFFpaXeI8T-3VZPIxxko) but you will get the opportunity to learn or practice web, Android, or embedded programming if you wish to do so.  
+We will mainly support software development within ROS but you will get the opportunity to learn or practice web, Android, or embedded programming if you wish to do so.  
+
+### The Crew
 
 You will do projects in teams. The number of teams and persons per team will be determined based on total number of registered students. Team structure is flexible, but we recommend an even distribution of the following roles among team members:  
 
@@ -63,17 +67,19 @@ You will do projects in teams. The number of teams and persons per team will be 
 Please keep in mind:  
 **Collaboration:**  
 
-- Our main collaboration platform will be [GitHub](https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2F&sa=D&sntz=1&usg=AOvVaw3K6x2c5JSD7q3c6-7F5JdK). If you do not yet have an account please create one.  
+- Our main collaboration platform will be GitHub. If you do not yet have an account please create one.  
 - One member from your team should create a repository for the class project and add the others as collaborators.  
 - Use the wiki for internal documentation.  
 
 **Assignments:**  
 
-- You will give a weekly update every week in the form of a blog post on your Tumblr page.  
+- You will give a weekly update every week in the form of a blog post on your Github page.  
 - Each week we will give you a list of things we would like to see in the blog post and tell you how the blog post will be reviewed and graded, here.  
 - Your blog posts are due on the following **Monday at 5pm**. The teaching staff will review and grade blogs immediately after this deadline.  
-- One member from each team should submit a link to the post on [Canvas](https://www.google.com/url?q=https%3A%2F%2Fcanvas.uw.edu%2F&sa=D&sntz=1&usg=AOvVaw0Eb0tU-buxkylFjlJDp0zG) by this deadline.  
-- You will have a total of 5 "grace days" for late submissions. Late posts will be reviewed the following week. If you are out of grace days, you will receive 1/2^n of the total grade, where n is the number of weeks that the post is late for.  
+- One member from each team should submit a link to the post on Canvas by this deadline.  
+- You will also have a couple of lab assigments, which will be small excercises related to content seen the previous week during the lecture and the lab. 
+
+<!-- - You will have a total of 5 "grace days" for late submissions. Late posts will be reviewed the following week. If you are out of grace days, you will receive 1/2^n of the total grade, where n is the number of weeks that the post is late for.  -->
 
 **Lecture versus lab:** We will have 45min lectures during some classes and use the rest of the lecture time for labs and feedback from the instructors.  
 
@@ -92,6 +98,7 @@ Please keep in mind:
 
 The distribution of your grades will be as follows:
 
-- 60% Weekly blog posts
-- 20% Final project demo and video
+- 30% Weekly blog posts
+- 20% Lab assignements
+- 30% Final project demo and video
 - 20% Participation and teamwork
