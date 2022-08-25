@@ -1,5 +1,9 @@
 # Course Information
 
+```{admonition} Note
+Page underconstruction
+```
+
 ## COURSE OBJECTIVES  
 
 The main goal of this course is to open up new career options in robotics for computer science and engineering students. To that end, the course will teach you the basics of robotics and give you implementation experience. You will learn to use libraries and tools within the most popular robot programming framework [ROS](Robot Operating System). We will touch on robot motion, navigation, perception, planning, and interaction through mini-lectures, labs and assignments, eventually integrating these components to create autonomous or semi-autonomous robotic functionalities. The project will give you team-work experience with large scale software integration and it will get you thinking about opportunities for using robots to make people's lives easier. At the end of the quarter students are expected to:  
