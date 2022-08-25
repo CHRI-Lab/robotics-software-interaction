@@ -6,14 +6,21 @@ Page underconstruction
 
 ## COURSE OBJECTIVES  
 
-The main goal of this course is to open up new career options in robotics for computer science and engineering students. To that end, the course will teach you the basics of robotics and give you implementation experience. You will learn to use libraries and tools within the most popular robot programming framework [ROS](Robot Operating System). We will touch on robot motion, navigation, perception, planning, and interaction through mini-lectures, labs and assignments, eventually integrating these components to create autonomous or semi-autonomous robotic functionalities. The project will give you team-work experience with large scale software integration and it will get you thinking about opportunities for using robots to make people's lives easier. At the end of the quarter students are expected to:  
+The main goal of this course is to open up new career options in robotics for computer science and engineering students. To that end, the course will teach the basics of robotics and provide practical experience with physical robots.
+Students will learn to use libraries and tools within the most popular robot programming framework ROS (Robot Operating System).
+We will provide basic theorthical knowledge on robot motion, navigation, perception, planning, and interaction through 1h lectures
 
+Weekly labs and assignments, will allow students to apply and reflect on what they learnt. 
+The weekley development will be integrated into an autonomous or semi-autonomous robotic systems that will be demonstrated at the end of the semester.
+The project will also provide an opportunity for students to enhance their professional skills with a focus on team-work for project-based software integration At the end, students are expected to:  
+
+- Intergate human-centered design in a robotics solution
+- Project planning and team-management
 - Understand basics of robot navigation, perception, planning, interaction; have a sense of challenging problems in robotics  
 - Know how to use important tools in ROS, be able to contribute to ROS, have awareness of available packages in ROS  
 - Be comfortable operating a robot platform, have experience using ROS tools to control a robot platform  
 - Understand the importance of interface design and robustness of functionalities in robotics  
-- Intergate human-centered design in a robotics solution
-- Be prepared to interview for a robotics job  
+- Be prepared to interview for a software developper job in teh robotics industry  
 
 ## PROJECT: THE NEXT ROBOTICS START-UP  
 
