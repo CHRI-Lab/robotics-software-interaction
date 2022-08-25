@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: 00-course-information.md
+chapters:
+- file: 01-introduction
+- file: 02-ros-and-robots
+- file: 03-visualisation-transformation
+- file: 04-motion-manipulation
+- file: 05-perception
+- file: 06-object-reocgnition
+- file: 07-human-robot-interaction
