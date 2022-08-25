@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Visualisation" href="03-visualisation-transformation.html" />
+    <link rel="next" title="Visualisation and Transformation" href="03-visualisation-transformation.html" />
     <link rel="prev" title="Introduction" href="01-introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-visualisation-transformation.html">
-   Visualisation
+   Visualisation and Transformation
   </a>
  </li>
  <li class="toctree-l1">
@@ -331,6 +331,28 @@ title="Print to PDF"
    ROS
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ros-basics">
+   ROS Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ervices">
+     ervices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roscore">
+     ROSCORE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros-msg">
+     ROS MSG
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -354,6 +376,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#ros">
    ROS
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ros-basics">
+   ROS Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ervices">
+     ervices
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#roscore">
+     ROSCORE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ros-msg">
+     ROS MSG
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -385,6 +429,34 @@ It is:</p>
 <li><p>a set of visualisation and simulation tools</p></li>
 <li><p>a community</p></li>
 </ul>
+</section>
+<section id="ros-basics">
+<h2>ROS Basics<a class="headerlink" href="#ros-basics" title="Permalink to this headline">#</a></h2>
+<p>Nodes</p>
+<p>Topics</p>
+<p>Show graph and show a simple code, init node, sub pub
+spin</p>
+<p>see notebook to run a first image processing module
+read image, drw red cercle</p>
+<section id="ervices">
+<h3>ervices<a class="headerlink" href="#ervices" title="Permalink to this headline">#</a></h3>
+<p>blocking, synchonous, so not good for long proceeses</p>
+</section>
+<section id="roscore">
+<h3>ROSCORE<a class="headerlink" href="#roscore" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="ros-msg">
+<h3>ROS MSG<a class="headerlink" href="#ros-msg" title="Permalink to this headline">#</a></h3>
+<p>Topics are TCP ports on which data is exchenged
+data is serialized using specific format
+data types = messages</p>
+<p>See several types of messages</p>
+<p>Pose
+Joint state
+Image</p>
+<p>Message content</p>
+<p>Echo a topic to see the content of the image_raw otopics</p>
+</section>
 </section>
 </section>
 
@@ -425,7 +497,7 @@ It is:</p>
     <a class='right-next' id="next-link" href="03-visualisation-transformation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualisation</p>
+        <p class="prev-next-title">Visualisation and Transformation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
