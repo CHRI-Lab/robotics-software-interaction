@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Visualisation &#8212; Robotics: Software and Interaction</title>
+    <title>Visualisation and Transformation &#8212; Robotics: Software and Interaction</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -126,7 +126,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Visualisation
+   Visualisation and Transformation
   </a>
  </li>
  <li class="toctree-l1">
@@ -304,23 +304,124 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transormation">
+   Transormation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-frame">
+     Reference Frame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tf">
+     TF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-frames">
+     Create frames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-a-tf-broadcaster">
+     write  a TF broadcaster
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Visualisation</h1>
+                <h1>Visualisation and Transformation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualisation">
+   Visualisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transormation">
+   Transormation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference-frame">
+     Reference Frame
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tf">
+     TF
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-frames">
+     Create frames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#write-a-tf-broadcaster">
+     write  a TF broadcaster
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -328,12 +429,37 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="visualisation">
-<h1>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="visualisation-and-transformation">
+<h1>Visualisation and Transformation<a class="headerlink" href="#visualisation-and-transformation" title="Permalink to this headline">#</a></h1>
 <div class="admonition-note admonition">
 <p class="admonition-title">Note</p>
 <p>Page underconstruction</p>
 </div>
+<section id="visualisation">
+<h2>Visualisation<a class="headerlink" href="#visualisation" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="transormation">
+<h2>Transormation<a class="headerlink" href="#transormation" title="Permalink to this headline">#</a></h2>
+<!-- see https://github.com/severin-lemaignan/ros-presentation/blob/master/ros.pdf-->
+<section id="reference-frame">
+<h3>Reference Frame<a class="headerlink" href="#reference-frame" title="Permalink to this headline">#</a></h3>
+<p>Frame is la labelled orgthonoal basis with a 6D orgiri</p>
+<p>Each part of the rot usually has its own frame</p>
+</section>
+<section id="tf">
+<h3>TF<a class="headerlink" href="#tf" title="Permalink to this headline">#</a></h3>
+<p>TF is the library used to maitain a transformation tree and calutaing the tansofmation between</p>
+</section>
+<section id="create-frames">
+<h3>Create frames<a class="headerlink" href="#create-frames" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="write-a-tf-broadcaster">
+<h3>write  a TF broadcaster<a class="headerlink" href="#write-a-tf-broadcaster" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
