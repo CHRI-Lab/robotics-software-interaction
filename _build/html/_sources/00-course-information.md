@@ -1,8 +1,7 @@
 # Course Information
+## Robotics: Software and Interaction
 
-```{admonition} Note
-Page underconstruction
-```
+
 
 ## COURSE OBJECTIVES  
 

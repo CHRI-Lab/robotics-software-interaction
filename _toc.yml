@@ -2,8 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: 00-course-information.md
+root: 0-welcome.md
+
 chapters:
+- file: 00-course-information
+  sections:
+  - file: 001-course-timeline
+  - file: 002-assignements
 - file: 01-introduction
 - file: 02-ros-and-robots
 - file: 03-visualisation-transformation
