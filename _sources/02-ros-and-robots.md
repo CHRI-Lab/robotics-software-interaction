@@ -1,4 +1,4 @@
-# ROS and Nao/Emika/Miro
+# 2. ROS and Nao/Emika/Miro
 
 ```{admonition} Note
 Page underconstruction

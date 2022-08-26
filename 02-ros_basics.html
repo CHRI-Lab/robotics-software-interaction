@@ -106,45 +106,67 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="00-course-information.html">
-                    Course Information
+                <a class="reference internal" href="0-welcome.html">
+                    Welcome to Robotics: Software and Interaction
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="00-course-information.html">
+   Course Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="001-course-timeline.html">
+     Course Timeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="002-assignements.html">
+     Assignements
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01-introduction.html">
-   Introduction
+   1.Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02-ros-and-robots.html">
-   ROS and Nao/Emika/Miro
+   2. ROS and Nao/Emika/Miro
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03-visualisation-transformation.html">
-   Visualisation and Transformation
+   3. Visualisation and Transformation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04-motion-manipulation.html">
-   Motion and Manipulation
+   4. Motion and Manipulation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05-perception.html">
-   Perception: AR Tatgs, Segmentation, Clustering
+   5. Perception: AR Tatgs, Segmentation, Clustering
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="06-object-recognition.html">
-   Object Recognition
+   6. Object Recognition
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="07-human-robot-interaction.html">
-   Human-Robot Interaction
+   7. Human-Robot Interaction
   </a>
  </li>
 </ul>
@@ -413,7 +435,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">7</span><span class="n">l</span><span class="o">/</span><span class="mi">9</span><span class="n">dw_hz1s4h17g_7kmd29z_qr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_38828</span><span class="o">/</span><span class="mf">1367767971.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">7</span><span class="n">l</span><span class="o">/</span><span class="mi">9</span><span class="n">dw_hz1s4h17g_7kmd29z_qr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_43728</span><span class="o">/</span><span class="mf">1367767971.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;image_processing&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">bridge</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
 <span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">image_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;processed_image&quot;</span><span class="p">,</span> <span class="n">Image</span><span class="p">)</span>

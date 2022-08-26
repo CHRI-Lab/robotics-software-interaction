@@ -45,7 +45,7 @@ while not rospy.is_shutdown():
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/var/folders/7l/9dw_hz1s4h17g_7kmd29z_qr0000gn/T/ipykernel_38828/1367767971.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/7l/9dw_hz1s4h17g_7kmd29z_qr0000gn/T/ipykernel_43728/1367767971.py[0m in [0;36m<module>[0;34m[0m
 [1;32m     18[0m [0mrospy[0m[0;34m.[0m[0minit_node[0m[0;34m([0m[0;34m'image_processing'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m     19[0m [0mbridge[0m [0;34m=[0m [0mCvBridge[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m---> 20[0;31m [0mimage_pub[0m [0;34m=[0m [0mrospy[0m[0;34m.[0m[0mPublisher[0m[0;34m([0m[0;34m"processed_image"[0m[0;34m,[0m [0mImage[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
