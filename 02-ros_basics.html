@@ -386,26 +386,96 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">jupyros</span> <span class="k">as</span> <span class="nn">jr</span>
 <span class="kn">import</span> <span class="nn">rospy</span>
-<span class="kn">from</span> <span class="nn">std_msgs.msg</span> <span class="kn">import</span> <span class="n">String</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">sensor_msgs.msg</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">cv_bridge</span> <span class="kn">import</span> <span class="n">CvBridge</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">threading</span>
 
-<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;jupyter_node&#39;</span><span class="p">)</span>
-<span class="n">jr</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s1">&#39;/sometopic&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">msg</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">on_image</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+    <span class="n">cv_image</span> <span class="o">=</span> <span class="n">bridge</span><span class="o">.</span><span class="n">imgmsg_to_cv2</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="s2">&quot;brg8&quot;</span><span class="p">)</span>
+    <span class="n">ros</span><span class="p">,</span> <span class="n">cols</span> <span class="p">,</span> <span class="n">channels</span> <span class="o">=</span> <span class="n">cv_image</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">cv_image</span><span class="p">,</span> <span class="p">(</span><span class="n">cols</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">ros</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">50</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">image_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">bridge</span><span class="o">.</span><span class="n">cv2_to_imgmsg</span><span class="p">(</span><span class="n">cv_image</span><span class="p">,</span><span class="s2">&quot;brg8&quot;</span><span class="p">))</span>
+
+<span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;image_processing&#39;</span><span class="p">)</span>
+<span class="n">bridge</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
+<span class="n">image_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;processed_image&quot;</span><span class="p">,</span> <span class="n">Image</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+    <span class="n">rospy</span><span class="o">.</span><span class="n">spin</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="mi">7</span><span class="n">l</span><span class="o">/</span><span class="mi">9</span><span class="n">dw_hz1s4h17g_7kmd29z_qr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_38828</span><span class="o">/</span><span class="mf">1367767971.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;image_processing&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">bridge</span> <span class="o">=</span> <span class="n">CvBridge</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">image_pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s2">&quot;processed_image&quot;</span><span class="p">,</span> <span class="n">Image</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> 
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">while</span> <span class="ow">not</span> <span class="n">rospy</span><span class="o">.</span><span class="n">is_shutdown</span><span class="p">():</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.9/site-packages/rospy/topics.py</span> in <span class="ni">__init__</span><span class="nt">(self, name, data_class, subscriber_listener, tcp_nodelay, latch, headers, queue_size)</span>
+<span class="g g-Whitespace">    </span><span class="mi">840</span>         <span class="nd">@raise</span> <span class="n">ROSException</span><span class="p">:</span> <span class="k">if</span> <span class="n">parameters</span> <span class="n">are</span> <span class="n">invalid</span>
+<span class="g g-Whitespace">    </span><span class="mi">841</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">842</span><span class="s2">         super(Publisher, self).__init__(name, data_class, Registration.PUB)</span>
+<span class="g g-Whitespace">    </span><span class="mi">843</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span><span class="s2">         if subscriber_listener:</span>
+
+<span class="nn">~/opt/anaconda3/lib/python3.9/site-packages/rospy/topics.py</span> in <span class="ni">__init__</span><span class="nt">(self, name, data_class, reg_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span><span class="s2">             raise ValueError(&quot;data_class [</span><span class="si">%s</span><span class="s2">] is not a class&quot;</span><span class="si">%d</span><span class="s2">ata_class)</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span><span class="s2">         if not issubclass(data_class, genpy.Message):</span>
+<span class="ne">--&gt; </span><span class="mi">144</span><span class="s2">             raise ValueError(&quot;data_class [</span><span class="si">%s</span><span class="s2">] is not a message data class&quot;</span><span class="si">%d</span><span class="s2">ata_class.__class__.__name__)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="s2">         # #2202</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span><span class="s2">         if not rosgraph.names.is_legal_name(name):</span>
+
+<span class="ne">ValueError</span>: data_class [type] is not a message data class
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/opt/ros/melodic/lib/python2.7/dist-packages/&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stop button</span>
+<span class="c1"># ================</span>
+<span class="n">stopButton</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+    <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Stop&#39;</span><span class="p">,</span>
+    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;danger&#39;</span><span class="p">,</span> <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;</span>
+    <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;Description&#39;</span><span class="p">,</span>
+    <span class="n">icon</span><span class="o">=</span><span class="s1">&#39;square&#39;</span> <span class="c1"># (FontAwesome names without the `fa-` prefix)</span>
+<span class="p">)</span>
 
-<span class="c1"># The next line should now work!</span>
-<span class="kn">import</span> <span class="nn">jupyros</span>
+<span class="n">image</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># Display function</span>
+<span class="c1"># ================</span>
+<span class="k">def</span> <span class="nf">view</span><span class="p">(</span><span class="n">button</span><span class="p">):</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">display_handle</span><span class="o">=</span><span class="n">display</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">display_id</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># if your camera reverses your image</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imencode</span><span class="p">(</span><span class="s1">&#39;.jpeg&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+        <span class="n">display_handle</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">frame</span><span class="o">.</span><span class="n">tobytes</span><span class="p">()))</span>
+        <span class="k">if</span> <span class="n">stopButton</span><span class="o">.</span><span class="n">value</span><span class="o">==</span><span class="kc">True</span><span class="p">:</span>
+            <span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+            <span class="n">display_handle</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">frame</span>
+
+            
+<span class="c1"># Run</span>
+<span class="c1"># ================</span>
+<span class="n">display</span><span class="p">(</span><span class="n">stopButton</span><span class="p">)</span>
+<span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">view</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">stopButton</span><span class="p">,))</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
