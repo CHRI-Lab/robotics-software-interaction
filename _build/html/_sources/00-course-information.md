@@ -73,10 +73,9 @@ Please keep in mind:
 
 **Assignments:**  
 
-- You will give a weekly update every week in the form of a blog post on your Github page.  
-- Each week we will give you a list of things we would like to see in the blog post and tell you how the blog post will be reviewed and graded, here.  
-- Your blog posts are due on the following **Monday at 5pm**. The teaching staff will review and grade blogs immediately after this deadline.  
-- One member from each team should submit a link to the post on Canvas by this deadline.  
+- You will give a weekly update every week in the form of a blog post on your Github page. Each week we will give you a list of things we would like to see in the blog post and tell you how the blog post will be reviewed and graded.  
+<!-- - Your blog posts are due on the following **Monday at 5pm**. The teaching staff will review and grade blogs immediately after this deadline. 
+- One member from each team should submit a link to the post on Canvas by this deadline.  -->
 - You will also have a couple of lab assigments, which will be small excercises related to content seen the previous week during the lecture and the lab. 
 
 <!-- - You will have a total of 5 "grace days" for late submissions. Late posts will be reviewed the following week. If you are out of grace days, you will receive 1/2^n of the total grade, where n is the number of weeks that the post is late for.  -->
@@ -98,7 +97,7 @@ Please keep in mind:
 
 The distribution of your grades will be as follows:
 
-- 30% Weekly blog posts
-- 20% Lab assignements
+- 30% Weekly blog posts assignement
+- 20% Lab assignements (individual grade)
 - 30% Final project demo and video
-- 20% Participation and teamwork
+- 20% Participation and teamwork (individual grade)
