@@ -17,22 +17,11 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import jupyros as jr
-import rospy
-import sys
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
-from IPython.display import display, Image
-import ipywidgets as widgets
-import threading
 
-
-
-def on_image(image):
-    cv_image = bridge.imgmsg_to_cv2(image,"brg8")
-    ros, cols , channels = cv_image.shape
-    cv2.circle(cv_image, (cols/2,ros/2), 50, (0,0,255), -1)
-    image_pub.publish(bridge.cv2_to_imgmsg(cv_image,"brg8"))
+cv_image = image
+ros, cols , channels = cv_image.shape
+cv2.circle(cv_image, (cols/2,ros/2), 50, (0,0,255), -1)
+image_pub.publish(bridge.cv2_to_imgmsg(cv_image,"brg8"))
 
 rospy.init_node('image_processing')
 bridge = CvBridge()
@@ -40,32 +29,17 @@ image_pub = rospy.Publisher("processed_image", Image)
 
 while not rospy.is_shutdown():
     rospy.spin()
-
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mValueError[0m                                Traceback (most recent call last)
-[0;32m/var/folders/7l/9dw_hz1s4h17g_7kmd29z_qr0000gn/T/ipykernel_43728/1367767971.py[0m in [0;36m<module>[0;34m[0m
-[1;32m     18[0m [0mrospy[0m[0;34m.[0m[0minit_node[0m[0;34m([0m[0;34m'image_processing'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     19[0m [0mbridge[0m [0;34m=[0m [0mCvBridge[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 20[0;31m [0mimage_pub[0m [0;34m=[0m [0mrospy[0m[0;34m.[0m[0mPublisher[0m[0;34m([0m[0;34m"processed_image"[0m[0;34m,[0m [0mImage[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     21[0m [0;34m[0m[0m
-[1;32m     22[0m [0;32mwhile[0m [0;32mnot[0m [0mrospy[0m[0;34m.[0m[0mis_shutdown[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/var/folders/7l/9dw_hz1s4h17g_7kmd29z_qr0000gn/T/ipykernel_5484/3828691977.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mcv_image[0m [0;34m=[0m [0mimage[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0mros[0m[0;34m,[0m [0mcols[0m [0;34m,[0m [0mchannels[0m [0;34m=[0m [0mcv_image[0m[0;34m.[0m[0mshape[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0mcv2[0m[0;34m.[0m[0mcircle[0m[0;34m([0m[0mcv_image[0m[0;34m,[0m [0;34m([0m[0mcols[0m[0;34m/[0m[0;36m2[0m[0;34m,[0m[0mros[0m[0;34m/[0m[0;36m2[0m[0;34m)[0m[0;34m,[0m [0;36m50[0m[0;34m,[0m [0;34m([0m[0;36m0[0m[0;34m,[0m[0;36m0[0m[0;34m,[0m[0;36m255[0m[0;34m)[0m[0;34m,[0m [0;34m-[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0mimage_pub[0m[0;34m.[0m[0mpublish[0m[0;34m([0m[0mbridge[0m[0;34m.[0m[0mcv2_to_imgmsg[0m[0;34m([0m[0mcv_image[0m[0;34m,[0m[0;34m"brg8"[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
 
-[0;32m~/opt/anaconda3/lib/python3.9/site-packages/rospy/topics.py[0m in [0;36m__init__[0;34m(self, name, data_class, subscriber_listener, tcp_nodelay, latch, headers, queue_size)[0m
-[1;32m    840[0m         [0;34m@[0m[0;32mraise[0m [0mROSException[0m[0;34m:[0m [0;32mif[0m [0mparameters[0m [0mare[0m [0minvalid[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    841[0m         """
-[0;32m--> 842[0;31m         [0msuper[0m[0;34m([0m[0mPublisher[0m[0;34m,[0m [0mself[0m[0;34m)[0m[0;34m.[0m[0m__init__[0m[0;34m([0m[0mname[0m[0;34m,[0m [0mdata_class[0m[0;34m,[0m [0mRegistration[0m[0;34m.[0m[0mPUB[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    843[0m [0;34m[0m[0m
-[1;32m    844[0m         [0;32mif[0m [0msubscriber_listener[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/opt/anaconda3/lib/python3.9/site-packages/rospy/topics.py[0m in [0;36m__init__[0;34m(self, name, data_class, reg_type)[0m
-[1;32m    142[0m             [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34m"data_class [%s] is not a class"[0m[0;34m%[0m[0mdata_class[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    143[0m         [0;32mif[0m [0;32mnot[0m [0missubclass[0m[0;34m([0m[0mdata_class[0m[0;34m,[0m [0mgenpy[0m[0;34m.[0m[0mMessage[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 144[0;31m             [0;32mraise[0m [0mValueError[0m[0;34m([0m[0;34m"data_class [%s] is not a message data class"[0m[0;34m%[0m[0mdata_class[0m[0;34m.[0m[0m__class__[0m[0;34m.[0m[0m__name__[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    145[0m         [0;31m# #2202[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    146[0m         [0;32mif[0m [0;32mnot[0m [0mrosgraph[0m[0;34m.[0m[0mnames[0m[0;34m.[0m[0mis_legal_name[0m[0;34m([0m[0mname[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-
-[0;31mValueError[0m: data_class [type] is not a message data class
-ValueError: data_class [type] is not a message data class
+[0;31mNameError[0m: name 'image' is not defined
+NameError: name 'image' is not defined
 

@@ -12,24 +12,10 @@ from cv_bridge import CvBridge
 from IPython.display import display, Image
 import ipywidgets as widgets
 import threading
+import cv2
 
 
-
-def on_image(image):
-    cv_image = bridge.imgmsg_to_cv2(image,"brg8")
-    ros, cols , channels = cv_image.shape
-    cv2.circle(cv_image, (cols/2,ros/2), 50, (0,0,255), -1)
-    image_pub.publish(bridge.cv2_to_imgmsg(cv_image,"brg8"))
-
-rospy.init_node('image_processing')
-bridge = CvBridge()
-image_pub = rospy.Publisher("processed_image", Image)
-
-while not rospy.is_shutdown():
-    rospy.spin()
-
-
-# In[ ]:
+# In[2]:
 
 
 # Stop button
@@ -43,7 +29,7 @@ stopButton = widgets.ToggleButton(
     icon='square' # (FontAwesome names without the `fa-` prefix)
 )
 
-image=[]
+global image
 
 # Display function
 # ================
@@ -67,6 +53,23 @@ def view(button):
 display(stopButton)
 thread = threading.Thread(target=view, args=(stopButton,))
 thread.start()
+
+
+# In[3]:
+
+
+
+cv_image = image
+ros, cols , channels = cv_image.shape
+cv2.circle(cv_image, (cols/2,ros/2), 50, (0,0,255), -1)
+image_pub.publish(bridge.cv2_to_imgmsg(cv_image,"brg8"))
+
+rospy.init_node('image_processing')
+bridge = CvBridge()
+image_pub = rospy.Publisher("processed_image", Image)
+
+while not rospy.is_shutdown():
+    rospy.spin()
 
 
 # In[ ]:
