@@ -1,4 +1,4 @@
-# 1.Introduction
+# 1. Introduction
 
 ```{admonition} Note
 Page underconstruction

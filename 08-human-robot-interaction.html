@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Markdown Files &#8212; Robotics: Software and Interaction</title>
+    <title>7. Human-Robot Interaction &#8212; Robotics: Software and Interaction</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="7. SLAM" href="07-slam.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="00-course-information.html">
    Course Information
@@ -169,8 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
    7. SLAM
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08-human-robot-interaction.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    7. Human-Robot Interaction
   </a>
  </li>
@@ -264,7 +265,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/CHRI-Lab/robotics-software-interaction/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/CHRI-Lab/robotics-software-interaction/issues/new?title=Issue%20on%20page%20%2F08-human-robot-interaction.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -292,7 +293,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/markdown.md"
+        <a href="_sources/08-human-robot-interaction.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -352,23 +353,47 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
+  <a class="reference internal nav-link" href="#human-perception">
+   Human Perception
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#face-detection">
+     Face detection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#body-pose-dectection">
+     Body Pose dectection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#speech">
+     Speech
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   Sample Roles and Directives
+  <a class="reference internal nav-link" href="#robot-expressivity">
+   Robot Expressivity
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tts">
+     TTS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gestures-leds">
+     Gestures/LEDs …
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#making-decisions-with-human-in-mind">
+   Making decisions with human in mind
   </a>
  </li>
 </ul>
@@ -380,7 +405,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Markdown Files</h1>
+                <h1>7. Human-Robot Interaction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -391,23 +416,47 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
+  <a class="reference internal nav-link" href="#human-perception">
+   Human Perception
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#face-detection">
+     Face detection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#body-pose-dectection">
+     Body Pose dectection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#speech">
+     Speech
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   Sample Roles and Directives
+  <a class="reference internal nav-link" href="#robot-expressivity">
+   Robot Expressivity
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tts">
+     TTS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gestures-leds">
+     Gestures/LEDs …
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   Citations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   Learn more
+  <a class="reference internal nav-link" href="#making-decisions-with-human-in-mind">
+   Making decisions with human in mind
   </a>
  </li>
 </ul>
@@ -420,58 +469,38 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
-</section>
-<section id="sample-roles-and-directives">
-<h2>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Permalink to this headline">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
+  <section class="tex2jax_ignore mathjax_ignore" id="human-robot-interaction">
+<h1>7. Human-Robot Interaction<a class="headerlink" href="#human-robot-interaction" title="Permalink to this headline">#</a></h1>
+<div class="admonition-note admonition">
 <p class="admonition-title">Note</p>
-<p>Here is a note</p>
+<p>Page underconstruction</p>
 </div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
+<section id="human-perception">
+<h2>Human Perception<a class="headerlink" href="#human-perception" title="Permalink to this headline">#</a></h2>
+<section id="face-detection">
+<h3>Face detection<a class="headerlink" href="#face-detection" title="Permalink to this headline">#</a></h3>
+<p>Interactive goal: recognise a person (call them by their name) recognize the mood, emotion, age …</p>
 </section>
-<section id="citations">
-<h2>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
-</div>
+<section id="body-pose-dectection">
+<h3>Body Pose dectection<a class="headerlink" href="#body-pose-dectection" title="Permalink to this headline">#</a></h3>
+<p>Interactive goal: activity reocgniton, proemics (if 3D)</p>
 </section>
-<section id="learn-more">
-<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<section id="speech">
+<h3>Speech<a class="headerlink" href="#speech" title="Permalink to this headline">#</a></h3>
+<p>Inteactive goal</p>
+</section>
+</section>
+<section id="robot-expressivity">
+<h2>Robot Expressivity<a class="headerlink" href="#robot-expressivity" title="Permalink to this headline">#</a></h2>
+<section id="tts">
+<h3>TTS<a class="headerlink" href="#tts" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="gestures-leds">
+<h3>Gestures/LEDs …<a class="headerlink" href="#gestures-leds" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="making-decisions-with-human-in-mind">
+<h2>Making decisions with human in mind<a class="headerlink" href="#making-decisions-with-human-in-mind" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -502,6 +531,13 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="07-slam.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">7. SLAM</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>
