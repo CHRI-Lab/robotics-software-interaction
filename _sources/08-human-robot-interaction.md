@@ -1,4 +1,4 @@
-# 7. Human-Robot Interaction
+# 8. Human-Robot Interaction
 
 ```{admonition} Note
 Page underconstruction
