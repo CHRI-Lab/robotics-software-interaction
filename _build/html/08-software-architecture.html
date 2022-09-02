@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to Robotics: Software and Interaction &#8212; Robotics: Software and Interaction</title>
+    <title>8. Robot software architecture and programming &#8212; Robotics: Software and Interaction</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Course Information" href="00-course-information.html" />
+    <link rel="next" title="8. Human-Robot Interaction" href="09-human-robot-interaction.html" />
+    <link rel="prev" title="7. SLAM" href="07-slam.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,13 +107,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0-welcome.html">
                     Welcome to Robotics: Software and Interaction
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="00-course-information.html">
    Course Information
@@ -170,8 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
    7. SLAM
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08-software-architecture.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    8. Robot software architecture and programming
   </a>
  </li>
@@ -270,7 +271,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/CHRI-Lab/robotics-software-interaction/issues/new?title=Issue%20on%20page%20%2F0-welcome.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/CHRI-Lab/robotics-software-interaction/issues/new?title=Issue%20on%20page%20%2F08-software-architecture.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -298,7 +299,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/0-welcome.md"
+        <a href="_sources/08-software-architecture.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -335,23 +336,172 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#behavioural-reactive-control">
+   behavioural (reactive) control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-behaviours">
+     combining behaviours
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subsumption-oprtator">
+       Subsumption oprtator
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subsumption-architecture">
+     Subsumption architecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-on-behaviroual-control">
+     summary on behaviroual control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#event-oriented-programming">
+     event oriented programming
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliberative-architecture">
+   deliberative architecture
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sense-plan-act-architecture">
+     sense-plan-act architecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-planning">
+     task planning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#three-tiered-architecture">
+     Three-tiered Architecture
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#client-server-vs-publish-subscribe">
+   Client-Server vs Publish-Subscribe
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to Robotics: Software and Interaction</h1>
+                <h1>8. Robot software architecture and programming</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#behavioural-reactive-control">
+   behavioural (reactive) control
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-behaviours">
+     combining behaviours
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subsumption-oprtator">
+       Subsumption oprtator
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subsumption-architecture">
+     Subsumption architecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-on-behaviroual-control">
+     summary on behaviroual control
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#event-oriented-programming">
+     event oriented programming
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deliberative-architecture">
+   deliberative architecture
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sense-plan-act-architecture">
+     sense-plan-act architecture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-planning">
+     task planning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#three-tiered-architecture">
+     Three-tiered Architecture
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#client-server-vs-publish-subscribe">
+   Client-Server vs Publish-Subscribe
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -359,24 +509,82 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-robotics-software-and-interaction">
-<h1>Welcome to Robotics: Software and Interaction<a class="headerlink" href="#welcome-to-robotics-software-and-interaction" title="Permalink to this headline">#</a></h1>
-<p><img alt="hri-ros.png" src="_images/hri-ros.png" /></p>
-<p>This is a hand book to give you the information relevant to the course.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="00-course-information.html">Course Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01-introduction.html">1. Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-ros-and-robots.html">2. ROS and Nao/Emika/Miro</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03-visualisation-transformation.html">3. Visualisation and Transformation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04-motion-manipulation.html">4. Motion and Manipulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-perception.html">5. Perception: AR Tatgs, Segmentation, Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06-object-recognition.html">6. Object Recognition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07-slam.html">7. SLAM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08-software-architecture.html">8. Robot software architecture and programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="09-human-robot-interaction.html">8. Human-Robot Interaction</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="robot-software-architecture-and-programming">
+<h1>8. Robot software architecture and programming<a class="headerlink" href="#robot-software-architecture-and-programming" title="Permalink to this headline">#</a></h1>
+<p>Goal: Complete desired tasks while monitoring and reacting
+to unexpected situations. Handle inputs and outputs (control/perception) from actuators
+and sensors in real-time2 and under uncertainty.</p>
+<section id="behavioural-reactive-control">
+<h2>behavioural (reactive) control<a class="headerlink" href="#behavioural-reactive-control" title="Permalink to this headline">#</a></h2>
+<p>sense-act</p>
+<p>subsume / orvewrite behaviour</p>
+<p>example Braintenberg machines</p>
+<p>non-linear control functions -&gt; complex behaviours</p>
+<section id="combining-behaviours">
+<h3>combining behaviours<a class="headerlink" href="#combining-behaviours" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Follow a human
+sensor: camera ; behavious follow human seen in camera</p></li>
+<li><p>avoid obstacle
+bumpers - move away from wall</p></li>
+<li><p>wander
+ecnoders - move forward and turn</p></li>
 </ul>
-</div>
+<p>Which one should have the priority?</p>
+<section id="subsumption-oprtator">
+<h4>Subsumption oprtator<a class="headerlink" href="#subsumption-oprtator" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="subsumption-architecture">
+<h3>Subsumption architecture<a class="headerlink" href="#subsumption-architecture" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="summary-on-behaviroual-control">
+<h3>summary on behaviroual control<a class="headerlink" href="#summary-on-behaviroual-control" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>strenghts</p></li>
+<li><p>weeknesses</p></li>
+</ul>
+</section>
+<section id="event-oriented-programming">
+<h3>event oriented programming<a class="headerlink" href="#event-oriented-programming" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="deliberative-architecture">
+<h2>deliberative architecture<a class="headerlink" href="#deliberative-architecture" title="Permalink to this headline">#</a></h2>
+<section id="sense-plan-act-architecture">
+<h3>sense-plan-act architecture<a class="headerlink" href="#sense-plan-act-architecture" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="task-planning">
+<h3>task planning<a class="headerlink" href="#task-planning" title="Permalink to this headline">#</a></h3>
+<p>HTN</p>
+<p>primitive action</p>
+</section>
+<section id="three-tiered-architecture">
+<h3>Three-tiered Architecture<a class="headerlink" href="#three-tiered-architecture" title="Permalink to this headline">#</a></h3>
+<p>This architecture contains a planning, an executive, and a behavioral
+control level that are hierarchically linked.</p>
+<ol class="simple">
+<li><p>Planning: this layer is at the highest-level, and focuses on task-planning for
+long-term goals.</p></li>
+<li><p>Executive: the executive layer is the middle layer connecting the planner and
+the behavioral control layers. The executive specifies priorities for the behav-
+ioral layer to accomplish a specific task. While the task may come directly
+from the planning layer, the executive can also split higher-level tasks into
+sub-tasks.</p></li>
+<li><p>Behavioral control: at the lowest-level. the behavioral control layer handles
+the implementation of low-level behaviors and is the interface to the robot’s
+actuators and sensors.</p></li>
+</ol>
+<p>The primary advantage of this architecture is that it combines benefits of the
+behavioral-based subsumption architecture (i.e. reactive planning) with better
+long-term planning capabilities (i.e. resulting from the planning level). Each of
+these levels will now be discussed in slightly further detail, however in practice
+the division among these levels is often quite blurred!</p>
+</section>
+</section>
+<section id="client-server-vs-publish-subscribe">
+<h2>Client-Server vs Publish-Subscribe<a class="headerlink" href="#client-server-vs-publish-subscribe" title="Permalink to this headline">#</a></h2>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -406,10 +614,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="00-course-information.html" title="next page">
+    <a class='left-prev' id="prev-link" href="07-slam.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">7. SLAM</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="09-human-robot-interaction.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Course Information</p>
+        <p class="prev-next-title">8. Human-Robot Interaction</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

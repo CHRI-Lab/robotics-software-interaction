@@ -16,4 +16,5 @@ chapters:
 - file: 05-perception
 - file: 06-object-recognition
 - file: 07-slam
-- file: 08-human-robot-interaction
+- file: 08-software-architecture
+- file: 09-human-robot-interaction

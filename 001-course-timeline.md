@@ -9,7 +9,7 @@
 | Week 5  | Perception: AR Tags, Segmentation, Clustering | Lab 4   | Lab Quiz/Exam |
 | Week 6  | Object Recognition                            | Lab 5   | Blog post 4   |
 | Week 7  | SLAM                                          | Lab 6   | Blog post 5   |
-| Week 8  | Human-Robot Interaction                       | Lab 7   |               |
-| Week 9  | Guest Lecture - Research                      | Project | Blog post 6   |
-| Week 10  | Guest Lecture - Industry                     | Project | Lab Quiz/Exam |
+| Week 8  | Software Architecure                          | Lab 7   |               |
+| Week 9  | Human-Robot Interaction                       | Project | Blog post 6   |
+| Week 10 | Guest Lecture - Industry                      | Project | Lab Quiz/Exam |
 | Week 11 | Final Project Demo                            |         |               |
