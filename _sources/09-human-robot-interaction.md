@@ -1,10 +1,14 @@
-# 8. Human-Robot Interaction
+# 9. Human-Robot Interaction
 
 ```{admonition} Note
 Page underconstruction
 ```
 
 ## Human Perception
+
+- emotion
+- attention
+- mental modelling
 
 ### Face detection
 
@@ -25,3 +29,9 @@ Inteactive goal
 ### Gestures/LEDs ...
 
 ## Making decisions with human in mind
+
+### social knwledge
+
+- common sense
+- social context
+- social norms (proxemics, moral, ethics, cultural)
