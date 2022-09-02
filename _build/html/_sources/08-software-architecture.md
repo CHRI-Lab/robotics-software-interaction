@@ -70,5 +70,13 @@ these levels will now be discussed in slightly further detail, however in practi
 the division among these levels is often quite blurred!
 
 
+## reflexive vs delibertive approach: pros and cons
+
+
+## S1 and S2 theory
+
+## hybrid architecure
+
+
 ##  Client-Server vs Publish-Subscribe
 
