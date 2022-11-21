@@ -1,5 +1,7 @@
 # 8. Robot software architecture and programming
 
+see resources lecture autonomy3
+
 Goal: Complete desired tasks while monitoring and reacting
 to unexpected situations. Handle inputs and outputs (control/perception) from actuators
 and sensors in real-time2 and under uncertainty.
@@ -80,3 +82,28 @@ the division among these levels is often quite blurred!
 
 ##  Client-Server vs Publish-Subscribe
 
+
+
+
+
+Lets solve a bigger problem 
+ì AAAI Competition: Pick Up the Trash 
+ì Problem Specs  
+ì Coca Cola cans, collect them and deposit them 
+in the trashcan (changes year-to-year) 
+ì What are some primitive behaviors  
+we might need? 
+LOLA (AAAI 1995 Winner) 
+GaTech (AAAI 1994 Winner) 
+Example based on  
+Murphy 2000, section 5.5
+
+FSM
+states:
+- start
+- wander for trash
+- move for trash
+- grab trash
+- drop trash
+- move to tcan
+- wander for Tcan
