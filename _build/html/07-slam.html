@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>7. SLAM &#8212; Robotics: Software and Interaction</title>
     
@@ -34,6 +34,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -55,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="8. Robot software architecture and programming" href="08-software-architecture.html" />
     <link rel="prev" title="6. Object Recognition" href="06-object-recognition.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -332,12 +333,53 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-a-spatio-temporal-memory-for-the-robot">
+   building a spatio-temporal memory for the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-probablility-and-bayes-rule">
+   conditional probablility and bayes rule
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probablilistic-inference">
+     probablilistic inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-state-estimate-kalman-filter">
+   Updating State Estimate - Kalman filter
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -349,6 +391,36 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-a-spatio-temporal-memory-for-the-robot">
+   building a spatio-temporal memory for the robot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conditional-probablility-and-bayes-rule">
+   conditional probablility and bayes rule
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probablilistic-inference">
+     probablilistic inference
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#updating-state-estimate-kalman-filter">
+   Updating State Estimate - Kalman filter
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -357,7 +429,48 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="slam">
-<h1>7. SLAM<a class="headerlink" href="#slam" title="Permalink to this headline">#</a></h1>
+<h1>7. SLAM<a class="headerlink" href="#slam" title="Permalink to this heading">#</a></h1>
+<section id="building-a-spatio-temporal-memory-for-the-robot">
+<h2>building a spatio-temporal memory for the robot<a class="headerlink" href="#building-a-spatio-temporal-memory-for-the-robot" title="Permalink to this heading">#</a></h2>
+<p>Probablilistic robotics</p>
+<ul class="simple">
+<li><p>localisation with landmarks</p></li>
+<li><p>localisation with edges</p></li>
+</ul>
+<p>Uncertainty</p>
+<ul class="simple">
+<li><p>measurement errors (sensors are not accurate)</p></li>
+<li><p>actuation errors (actions never do excactly wht they are supposed to)</p></li>
+</ul>
+</section>
+<section id="conditional-probablility-and-bayes-rule">
+<h2>conditional probablility and bayes rule<a class="headerlink" href="#conditional-probablility-and-bayes-rule" title="Permalink to this heading">#</a></h2>
+<p>P(E|O) = probablity that E is true given that we observe O</p>
+<p>P(cold|cough) = P(cold) * P(cough|cold)
+i.e. . if we know the prior probability that I have a
+cold (without any evidence) and I know that a cold
+causes a cough, with some probability, then we
+can calculate the posterior probability</p>
+<section id="probablilistic-inference">
+<h3>probablilistic inference<a class="headerlink" href="#probablilistic-inference" title="Permalink to this heading">#</a></h3>
+<p>Bayes rule: P(H|E) = P(H) x P(E|H)</p>
+<p>or bel(x_t) = bel(x_t-1) x prob(observation)</p>
+</section>
+</section>
+<section id="updating-state-estimate-kalman-filter">
+<h2>Updating State Estimate - Kalman filter<a class="headerlink" href="#updating-state-estimate-kalman-filter" title="Permalink to this heading">#</a></h2>
+<p>• The Kalman filter is commonly used to update the estimate of the robot’s
+state
+• Two phases:</p>
+<ol class="simple">
+<li><p>Prediction (Process Update)
+• predicts where the robot will be after performing an action</p></li>
+<li><p>Correction (Observation Update)
+• use observations to correct prediction
+• What follows is only a sketch of the Kalman filter
+• It’s nowhere near the complete algorithm</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8. Robot software architecture and programming &#8212; Robotics: Software and Interaction</title>
     
@@ -34,6 +34,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -55,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="9. Human-Robot Interaction" href="09-human-robot-interaction.html" />
     <link rel="prev" title="7. SLAM" href="07-slam.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -536,18 +537,18 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="robot-software-architecture-and-programming">
-<h1>8. Robot software architecture and programming<a class="headerlink" href="#robot-software-architecture-and-programming" title="Permalink to this headline">#</a></h1>
+<h1>8. Robot software architecture and programming<a class="headerlink" href="#robot-software-architecture-and-programming" title="Permalink to this heading">#</a></h1>
 <p>Goal: Complete desired tasks while monitoring and reacting
 to unexpected situations. Handle inputs and outputs (control/perception) from actuators
 and sensors in real-time2 and under uncertainty.</p>
 <section id="behavioural-reactive-control">
-<h2>behavioural (reactive) control<a class="headerlink" href="#behavioural-reactive-control" title="Permalink to this headline">#</a></h2>
+<h2>behavioural (reactive) control<a class="headerlink" href="#behavioural-reactive-control" title="Permalink to this heading">#</a></h2>
 <p>sense-act</p>
 <p>subsume / orvewrite behaviour</p>
 <p>example Braintenberg machines</p>
 <p>non-linear control functions -&gt; complex behaviours</p>
 <section id="combining-behaviours">
-<h3>combining behaviours<a class="headerlink" href="#combining-behaviours" title="Permalink to this headline">#</a></h3>
+<h3>combining behaviours<a class="headerlink" href="#combining-behaviours" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Follow a human
 sensor: camera ; behavious follow human seen in camera</p></li>
@@ -558,35 +559,35 @@ ecnoders - move forward and turn</p></li>
 </ul>
 <p>Which one should have the priority?</p>
 <section id="subsumption-oprtator">
-<h4>Subsumption oprtator<a class="headerlink" href="#subsumption-oprtator" title="Permalink to this headline">#</a></h4>
+<h4>Subsumption oprtator<a class="headerlink" href="#subsumption-oprtator" title="Permalink to this heading">#</a></h4>
 </section>
 </section>
 <section id="subsumption-architecture">
-<h3>Subsumption architecture<a class="headerlink" href="#subsumption-architecture" title="Permalink to this headline">#</a></h3>
+<h3>Subsumption architecture<a class="headerlink" href="#subsumption-architecture" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="summary-on-behaviroual-control">
-<h3>summary on behaviroual control<a class="headerlink" href="#summary-on-behaviroual-control" title="Permalink to this headline">#</a></h3>
+<h3>summary on behaviroual control<a class="headerlink" href="#summary-on-behaviroual-control" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>strenghts</p></li>
 <li><p>weeknesses</p></li>
 </ul>
 </section>
 <section id="event-oriented-programming">
-<h3>event oriented programming<a class="headerlink" href="#event-oriented-programming" title="Permalink to this headline">#</a></h3>
+<h3>event oriented programming<a class="headerlink" href="#event-oriented-programming" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="deliberative-architecture">
-<h2>deliberative architecture<a class="headerlink" href="#deliberative-architecture" title="Permalink to this headline">#</a></h2>
+<h2>deliberative architecture<a class="headerlink" href="#deliberative-architecture" title="Permalink to this heading">#</a></h2>
 <section id="sense-plan-act-architecture">
-<h3>sense-plan-act architecture<a class="headerlink" href="#sense-plan-act-architecture" title="Permalink to this headline">#</a></h3>
+<h3>sense-plan-act architecture<a class="headerlink" href="#sense-plan-act-architecture" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="task-planning">
-<h3>task planning<a class="headerlink" href="#task-planning" title="Permalink to this headline">#</a></h3>
+<h3>task planning<a class="headerlink" href="#task-planning" title="Permalink to this heading">#</a></h3>
 <p>HTN</p>
 <p>primitive action</p>
 </section>
 <section id="three-tiered-architecture">
-<h3>Three-tiered Architecture<a class="headerlink" href="#three-tiered-architecture" title="Permalink to this headline">#</a></h3>
+<h3>Three-tiered Architecture<a class="headerlink" href="#three-tiered-architecture" title="Permalink to this heading">#</a></h3>
 <p>This architecture contains a planning, an executive, and a behavioral
 control level that are hierarchically linked.</p>
 <ol class="simple">
@@ -609,16 +610,16 @@ the division among these levels is often quite blurred!</p>
 </section>
 </section>
 <section id="reflexive-vs-delibertive-approach-pros-and-cons">
-<h2>reflexive vs delibertive approach: pros and cons<a class="headerlink" href="#reflexive-vs-delibertive-approach-pros-and-cons" title="Permalink to this headline">#</a></h2>
+<h2>reflexive vs delibertive approach: pros and cons<a class="headerlink" href="#reflexive-vs-delibertive-approach-pros-and-cons" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="s1-and-s2-theory">
-<h2>S1 and S2 theory<a class="headerlink" href="#s1-and-s2-theory" title="Permalink to this headline">#</a></h2>
+<h2>S1 and S2 theory<a class="headerlink" href="#s1-and-s2-theory" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="hybrid-architecure">
-<h2>hybrid architecure<a class="headerlink" href="#hybrid-architecure" title="Permalink to this headline">#</a></h2>
+<h2>hybrid architecure<a class="headerlink" href="#hybrid-architecure" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="client-server-vs-publish-subscribe">
-<h2>Client-Server vs Publish-Subscribe<a class="headerlink" href="#client-server-vs-publish-subscribe" title="Permalink to this headline">#</a></h2>
+<h2>Client-Server vs Publish-Subscribe<a class="headerlink" href="#client-server-vs-publish-subscribe" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
